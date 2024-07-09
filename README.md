@@ -2,9 +2,7 @@
 
 ![anibook_print_desktop](https://github.com/diogomasc/Anibook/assets/164716668/c9655c88-05cc-4d2f-b562-c907e25bdf3e)
 
-AniBook é uma plataforma PHP para fãs de animes descobrirem, avaliarem e discutirem seus favoritos. Use Bootstrap e JavaScript para uma interface interativa. Explore trailers, sinopses e avaliações de animes categorizados por gênero.
-
-AniBook é um projeto dedicado aos fãs de animes, proporcionando uma plataforma para descobrir, avaliar e discutir seus animes favoritos. Desenvolvido utilizando PHP, Bootstrap e JavaScript, o AniBook permite aos usuários adicionarem e explorar a coleção de animes categorizados por gênero de ourtros usuários, assistir trailers, ler sinopses detalhadas e compartilhar suas próprias críticas e avaliações.
+AniBook é uma plataforma PHP que permite aos fãs de animes descobrir, avaliar e discutir seus favoritos, além de compartilhar suas próprias críticas e avaliações.. Desenvolvido como parte da disciplina de Desenvolvimento Web, o site utiliza Bootstrap e JavaScript para uma interface interativa. O banco de dados MySQL é usado para armazenar informações essenciais, como trailers, sinopses e avaliações.
 
 ## Tecnologias Utilizadas
 
@@ -46,8 +44,11 @@ Esta abordagem facilita a manutenção do código, separando preocupações e pe
    - Isso abrirá a interface do PHPMyAdmin onde você poderá gerenciar seu banco de dados.
 
 3. **Criação do Banco de Dados**:
-   - Na interface do PHPMyAdmin, clique na aba "SQL" no topo.
-   - Cole o seguinte código SQL na caixa de consulta e clique em "Executar" para criar as tabelas `users`, `movies` e `reviews`.
+
+- Na interface do PHPMyAdmin, clique em "Novo" no menu à esquerda para criar um novo banco de dados.
+- Digite o nome "Anibook" na caixa de texto e clique em "Criar" para criar o banco de dados.
+- Após criar o banco de dados "Anibook", clique na aba "SQL" no topo.
+- Cole o seguinte código SQL na caixa de consulta e clique em "Executar" para criar as tabelas users, movies e reviews dentro do banco de dados "Anibook":
 
 ```sql
 CREATE TABLE users (
