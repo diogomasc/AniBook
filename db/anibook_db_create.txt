@@ -1,0 +1,33 @@
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    email VARCHAR(200) NOT NULL UNIQUE,
+    password VARCHAR(200) NOT NULL,
+    image VARCHAR(200),
+    token VARCHAR(200),
+    bio TEXT
+);
+
+CREATE TABLE movies (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(100) NOT NULL,
+    description TEXT,
+    image VARCHAR(200),
+    trailer VARCHAR(150),
+    category VARCHAR(50),
+    length VARCHAR(50),
+    users_id INT,
+    year INT,
+    FOREIGN KEY (users_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+CREATE TABLE reviews (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    rating INT CHECK (rating >= 1 AND rating <= 5),
+    review TEXT,
+    users_id INT,
+    movies_id INT,
+    FOREIGN KEY (users_id) REFERENCES users(id) ON DELETE CASCADE,
+    FOREIGN KEY (movies_id) REFERENCES movies(id) ON DELETE CASCADE
+);
